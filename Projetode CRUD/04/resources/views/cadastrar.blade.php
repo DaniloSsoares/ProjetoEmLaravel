@@ -49,7 +49,7 @@
 
 
     <div class="container mt-5">
-        <form method="POST" action="/adicionarContato">
+    <form method="POST" action="/adicionarContato" enctype="multipart/form-data">
             @csrf
             <div class="form-group mb-2">
                 <label for="exampleInputEmail1">Título:</label>
@@ -79,6 +79,10 @@
                 <label for="exampleInputPassword1">Resumo</label>
                 <input type="text" class="form-control" name="resumo" placeholder="Resumo">
             </div>
+            <div class="form-group mb-2">
+                <label for="exampleInputPassword1">Capa</label> 
+                <input type="file" class="form-control" name="capa" placeholder="Capa">
+            </div>
             <button type="submit" class="btn btn-primary center">Cadastrar</button>
         </form>
 
@@ -95,6 +99,7 @@
                     <th scope="col">Pontuação</th>
                     <th scope="col">Diretor</th>
                     <th scope="col">Resumo</th>
+                    <th scope="col">Capa</th>
                     <th scope="col">Ações</th>
                 </tr>
             </thead>
@@ -110,6 +115,13 @@
                             <td>{{ $fil->pontuacao }}</td>
                             <td>{{ $fil->diretor }}</td>
                             <td>{{ $fil->resumo }}</td>
+                            <td>
+                                   @if ($fil->capa)
+                                       <img src="{{ $fil->capa_url }}" alt="Capa do filme" style="width: 100px; height: auto;">
+                                   @else
+                                       <p>Sem capa</p>
+                                   @endif
+                            </td>
                             <td>
                                 <a href="/editar/{{ $fil->id }}" class="btn btn-primary">Editar</a>
                                 <a href="/excluir/{{ $fil->id }}" class="btn btn-danger">Excluir</a>

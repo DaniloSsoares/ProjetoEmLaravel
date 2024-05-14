@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string("pontuacao");
             $table->string("diretor");
             $table->string("resumo");
+            $table->string("capa");
             $table->timestamps();
         });
     }

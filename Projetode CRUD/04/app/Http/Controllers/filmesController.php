@@ -21,6 +21,13 @@ class filmesController extends Controller
             $filme->pontuacao = $req->pontuacao;
             $filme->diretor = $req->diretor;
             $filme->resumo= $req->resumo;
+            $filme->capa= $req->capa;
+
+          //hasFile está sendo usado para verificar se uma qrquivo com nome capa do form foi enviado na requisição
+           if ($req->hasFile('capa') && $req->file('capa')->isValid()) {
+            //a proxima linha armazena o arquivo enviado para o arquivo capas
+            $filme->capa = $req->capa->store('capas', 'public');
+           }
             $filme->save();
             return redirect()->back();
         }
@@ -40,7 +47,8 @@ class filmesController extends Controller
                      "duracao" => $req->duracao,
                      "pontuacao" => $req->pontuacao,
                      "diretor" => $req->diretor,
-                     "resumo"=> $req->resumo 
+                     "resumo"=> $req->resumo,
+                     "capa"=> $req->capa 
              ]       
                  ); 
             return redirect()->back();

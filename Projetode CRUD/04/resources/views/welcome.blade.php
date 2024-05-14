@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Mitr|Roboto+Slab|Source+Sans+Pro&display=swap" rel="stylesheet">
 <script src="https://premium-tailwindcomponents.netlify.app/assets/build/js/main.js?id=8c11b7cf78ebea1b5aed"></script>
 
+
 </head>
 <body>
 
@@ -170,6 +171,7 @@
               </figure>
             </div>
           </div>
+
         <div class="container mt-5">
     <div class="table-responsive">
         <table class="table table-bordered border-primary">
@@ -183,6 +185,7 @@
                     <th scope="col">Pontuação</th>
                     <th scope="col">Diretor</th>
                     <th scope="col">Resumo</th>
+                    <th scope="col">Capa</th>
                     <th scope="col">Ações</th>
                 </tr>
             </thead>
@@ -198,6 +201,11 @@
                             <td>{{ $fil->pontuacao }}</td>
                             <td>{{ $fil->diretor }}</td>
                             <td>{{ $fil->resumo }}</td>
+                            <td>
+                                  @if($fil->capa)
+                                         <img src="{{$fil->capa_url}}" alt="Capa do Filme" style="width: 100px; height:auto;">
+                                  @endif
+                            </td>
                             <td>
                                 <a href="/editar/{{ $fil->id }}" class="btn btn-primary">Editar</a>
                                 <a href="/excluir/{{ $fil->id }}" class="btn btn-danger">Excluir</a>
