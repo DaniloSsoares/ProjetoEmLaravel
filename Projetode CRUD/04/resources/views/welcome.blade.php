@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="/css/Home.css">
   <link rel="stylesheet" href="/css/Cards.css">
   <link rel="stylesheet" href="/css/Footer.css">
+  <link rel="stylesheet" href="/css/App.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css?family=Mitr|Roboto+Slab|Source+Sans+Pro&display=swap" rel="stylesheet">
 <script src="https://premium-tailwindcomponents.netlify.app/assets/build/js/main.js?id=8c11b7cf78ebea1b5aed"></script>
@@ -27,7 +28,7 @@
                 <a href="#" id="HomeNa" class="text-violet-950  hover:text-rose-500 rounded-md px-3 py-2 text-lg  font-medium">Home</a>
                 <a href="#" id="CadastrarNa"class="text-violet-950  hover:text-rose-500 rounded-md px-3 py-2 text-lg  font-medium">Cadastro</a>
                 <a href="#" id="DeletarNa" class="text-violet-950  hover:text-rose-500 rounded-md px-3 py-2 text-lg  font-medium">Deletar</a>
-                <a href="#" id="editarNa" class="text-violet-950  hover:text-rose-500 rounded-md px-3 py-2 text-lg  font-medium">editar</a>
+                <a href="#" id="editarNa" class="text-violet-950  hover:text-rose-500 rounded-md px-3 py-2 text-lg  font-medium">Editar</a>
               </div>
             </div>
           </div>
@@ -116,7 +117,7 @@
           
             <div class="card">
               <figure class="card__thumb">
-                <img src="/img/1521070.jpg" alt="Picture by Štefan Štefančík" class="card__image">
+                <img src="/img/Oppenheimer.jpg" alt="Picture by Štefan Štefančík" class="card__image">
                 <figcaption class="card__caption">
                   <h2 class="card__title">Oppenheimer <br></h2>
                   <br>
@@ -128,7 +129,7 @@
           
             <div class="card">
               <figure class="card__thumb">
-                <img src="/img/1521070.jpg" alt="Picture by Nathan Dumlao" class="card__image">
+                <img src="/img/JohnWick.jpg" alt="Picture by Nathan Dumlao" class="card__image">
                 <figcaption class="card__caption">
                   <h2 class="card__title">John <br>Wick</h2>
                   <p class="card__snippet">"John Wick" é um filme de ação estrelado por Keanu Reeves como um ex-assassino que retorna ao mundo do crime para vingar a morte de seu cachorro.</p>
@@ -139,7 +140,7 @@
           
             <div class="card">
               <figure class="card__thumb">
-                <img src="/img/446720-avengers-endgame-iphone-wallpaper-avengers-poster.jpg"" alt="Picture by Daniel Lincoln" class="card__image">
+                <img src="/img/Vingadores.jpg" alt="Picture by Daniel Lincoln" class="card__image">
                 <figcaption class="card__caption">
                   <h2 class="card__title">Os
                     <br> Vingadores</h2>
@@ -151,7 +152,7 @@
 
             <div class="card">
               <figure class="card__thumb">
-                <img src="/img/5562592.jpg" alt="Picture by Štefan Štefančík" class="card__image">
+                <img src="/img/Velozes.jpg" alt="Picture by Štefan Štefančík" class="card__image">
                 <figcaption class="card__caption">
                   <h2 class="card__title">Velozes e 
                     <br>Furiosos</h2>
@@ -162,7 +163,7 @@
             </div>
             <div class="card">
               <figure class="card__thumb">
-                <img src="/img/915259.jpg" alt="Picture by Štefan Štefančík" class="card__image">
+                <img src="/img/JusticeLeague.jpg" alt="Picture by Štefan Štefančík" class="card__image">
                 <figcaption class="card__caption">
                   <h2 class="card__title">Liga da <br> Justiça</h2>
                   <p class="card__snippet">A "Liga da Justiça" é um grupo de super-heróis da DC Comics, incluindo Batman, Superman, Mulher-Maravilha, Flash, Aquaman e Cyborg, que se unem para combater ameaças cósmicas e proteger o mundo contra vilões poderosos. Juntos, eles defendem a justiça e a segurança do planeta Terra.</p>
@@ -172,55 +173,49 @@
             </div>
           </div>
 
-        <div class="container mt-5">
-    <div class="table-responsive">
-        <table class="table table-bordered border-primary">
-            <thead class="bg-primary text-white">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Título</th>
-                    <th scope="col">Subtítulo</th>
-                    <th scope="col">Ano de lançamento</th>
-                    <th scope="col">Duração</th>
-                    <th scope="col">Pontuação</th>
-                    <th scope="col">Diretor</th>
-                    <th scope="col">Resumo</th>
-                    <th scope="col">Capa</th>
-                    <th scope="col">Ações</th>
-                </tr>
+          <div>
+    <div>
+        <table style="border-collapse: separate; border-spacing: 0 15px;">
+            <thead>
+ 
             </thead>
             <tbody>
                 @if (count($filmes) > 0)
                     @foreach ($filmes as $fil)
                         <tr>
-                            <td>{{ $fil->id }}</td>
-                            <td>{{ $fil->titulo }}</td>
-                            <td>{{ $fil->subtitulo }}</td>
-                            <td>{{ $fil->anolanc }}</td>
-                            <td>{{ $fil->duracao }}</td>
-                            <td>{{ $fil->pontuacao }}</td>
-                            <td>{{ $fil->diretor }}</td>
-                            <td>{{ $fil->resumo }}</td>
-                            <td>
-                                  @if($fil->capa)
-                                         <img src="{{$fil->capa_url}}" alt="Capa do Filme" style="width: 100px; height:auto;">
-                                  @endif
+                            <td style="display: flex; align-items: center; border: 1px solid #000; background-color: #fff; padding: 10px; border-radius: 15px;">
+                                @if($fil->capa)
+                                    <div style="width: 100px; height: 100px; overflow: hidden; border-radius: 50%; margin-right: 20px;">
+                                        <img src="{{$fil->capa_url}}" alt="Capa do Filme" style="width: 100%; height: auto;">
+                                    </div>
+                                @endif
+                                <div>
+                                    <div>Título: {{ $fil->titulo }}</div>
+                                    <div>Subtítulo: {{ $fil->subtitulo }}</div>
+                                    <div>Ano de Lançamento: {{ $fil->anolanc }}</div>
+                                    <div>Duração: {{ $fil->duracao }}</div>
+                                    <div>Pontuação: {{ $fil->pontuacao }}</div>
+                                    <div>Diretor: {{ $fil->diretor }}</div>
+                                    <div>Resumo: {{ $fil->resumo }}</div>
+                                </div>
                             </td>
-                            <td>
-                                <a href="/editar/{{ $fil->id }}" class="btn btn-primary">Editar</a>
-                                <a href="/excluir/{{ $fil->id }}" class="btn btn-danger">Excluir</a>
+                            <td style="border: 1px solid #000; background-color: #fff; padding: 10px; border-radius: 15px;">
+                                <a href="/editar/{{ $fil->id }}" class="btn btn-primary" style="border-radius: 20px; padding: 10px 20px;">Editar</a>
+                                <a href="/excluir/{{ $fil->id }}" class="btn btn-danger" style="border-radius: 20px; padding: 10px 20px;">Excluir</a>
                             </td>
                         </tr>
                     @endforeach
                 @else
                     <tr>
-                        <td colspan="9">Sem registros!</td>
+                        <td colspan="9" style="border: 1px solid #000; background-color: #fff; padding: 10px; border-radius: 15px;">Sem registros!</td>
                     </tr>
                 @endif
             </tbody>
         </table>
     </div>
 </div>
+
+
 
 
     
