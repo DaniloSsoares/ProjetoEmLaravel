@@ -14,7 +14,11 @@ Body{
 
 .fundo{
     z-index: -1;
-
+    width: 100%;
+}
+.fundomobile{
+  z-index: -1;
+  display: none;
 }
 
 
@@ -28,11 +32,10 @@ html *:after {
   font-family: "Vollkorn", serif;;
 }
 .chamativo {
-  color: white;
-  background-color: rgb(248, 113, 113);
+  color: rgb(248, 113, 113);
   padding: 10px;
   text-align: center;
-  font-size: 2em;
+  font-size: 3em;
   border-radius: 10px;
 }
 
@@ -40,4 +43,20 @@ html *:after {
   font-size: medium;
 }
 
+@media (max-width: 576px) {
+  .fundo{
+display: none;
+}
+.fundomobile{
+  display: block;
+  width: 100%;
+  top: 0;
+}
+.chamativo{
+  top: 0;
+}
+.containerHome{
+  margin-top: 45%;
+}
+}
 

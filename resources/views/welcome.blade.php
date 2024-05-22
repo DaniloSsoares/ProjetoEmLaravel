@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/css/Home.css">
   <link rel="stylesheet" href="/css/Cards.css">
   <link rel="stylesheet" href="/css/Footer.css">
+  <link rel="stylesheet" href="/css/Navbar.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css?family=Mitr|Roboto+Slab|Source+Sans+Pro&display=swap" rel="stylesheet">
   <script src="https://premium-tailwindcomponents.netlify.app/assets/build/js/main.js?id=8c11b7cf78ebea1b5aed"></script>
@@ -19,78 +20,39 @@
 <body>
 
   <div class="min-h-full">
-    <nav class="navbar">
-      <div class="mx-auto max-w-1xl px-1 sm:px-6 lg:px-3">
-        <div class="flex h-16 items-center justify-between">
-          <div class="flex items-center">
-            <div class="flex-shrink-0">
-            </div>
-            <div class="hidden md:block">
-              <div class="ml-10 flex items-baseline space-x-4">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" id="HomeNa" class="text-violet-100  hover:text-rose-500 rounded-md px-3 py-2 text-lg  font-medium">Home</a>
-                <a href="#" id="CadastrarNa" class="text-violet-100  hover:text-rose-500 rounded-md px-3 py-2 text-lg  font-medium">Cadastrar</a>
-                <a href="#" id="ListarNa" class="text-violet-100  hover:text-rose-500 rounded-md px-3 py-2 text-lg  font-medium">Listar</a>
-              </div>
-            </div>
+  <nav>
+      <div class="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+          <div class="logo">
+            <h1>Navbar</h1>
           </div>
-          <div class="hidden md:block">
-            <div class="ml-4 flex items-center md:ml-6">
-              <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                <span class="absolute -inset-1.5"></span>
-                <span class="sr-only">View notifications</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-                </svg>
-              </button>
-
-
-              <!--
-                  Dropdown menu, show/hide based on menu state.
-  
-                  Entering: "transition ease-out duration-100"
-                    From: "transform opacity-0 scale-95"
-                    To: "transform opacity-100 scale-100"
-                  Leaving: "transition ease-in duration-75"
-                    From: "transform opacity-100 scale-100"
-                    To: "transform opacity-0 scale-95"
-                -->
-            </div>
-          </div>
-        </div>
-        <div class="-mr-2 flex md:hidden">
-        </div>
-      </div>
-
-      <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="md:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a href="#" id="HomeNa" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Home</a>
-          <a href="#" id="CadastrarNa" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Cadastrar</a>
-          <a href="#" id="ListarNa" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Listar</a>
-
-        </div>
-        <div class="border-t border-gray-700 pb-3 pt-4">
-          <div class="flex items-center px-5">
+          <div class="menu-items">
+            <li><a href="#" id="HomeNa">Home</a></li>
+            <li><a href="#" id="CadastrarNa">Cadastrar</a></li>
+            <li><a href="#" id="ListarNa">Listar</a></li>
           </div>
         </div>
       </div>
+      <img src="/img/JonhWickCapa.jpg" class=" absolute bottom-0 -mr-40 lg:mr-0 fundo" alt="">
+      <img src="/img/JonhWickCapaMobile.jpg" class=" absolute bottom-0 -mr-40 lg:mr-0 fundomobile" alt="">
 
+    </nav>
 
-      <div class="container min-h-full px-6 md:px-12 z-10 flex items-center py-24 xl:py-40 ">
+  <div class="containerHome min-h-full px-6 md:px-12 z-10 flex items-center py-24 xl:py-40 ">
         <div class="lg:w-3/5 xl:w-2/5 flex flex-col items-start relative z-10">
           <h1 class="font-roboto-slab text-4xl sm:text-6xl text-red-400 leading-tight mt-4">Filmes e Séries <br> Para todas as pessoas</h1>
           <div class="max-w-md">
             <p class="font-source-sans-pro text-indigo-500 mt-6 text-lg">A maior plataforma de filmes e séries da atualidade, venha ver com a familia os maiores lançamentos</p>
           </div>
-          <a href="#" class="block bg-indigo-500 hover:bg-indigo-400 py-2 px-4 rounded-full text-sm font-mitr text-white uppercase mt-10">Vamos nessa</a>
-        </div>
-        <img src="/img/JonhWickCapa.jpg" class="hidden sm:block absolute bottom-0 right-0 -mr-40 lg:mr-0 fundo" alt="">
-      </div>
+         </div>
+             </div>
   </div>
-  </nav>
-
 
   <!--       BANNER FILMES ----------------------------------------->
   <main class="h-screen w-screen py-6 flex items-center justify-center flex-wrap mt-20">
@@ -105,7 +67,10 @@
         @foreach ($filmes as $fil)
         <div class="card">
           <figure class="card__thumb">
+            <div class="respon">
             <img src="{{$fil->capa_url}}" alt="Picture by Štefan Štefančík" class="card__image">
+            </div>
+            
             <figcaption class="card__caption">
               <h2 class="card__title"> {{ $fil->titulo }}<br></h2>
               <br>
