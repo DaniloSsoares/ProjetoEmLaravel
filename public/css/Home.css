@@ -1,7 +1,10 @@
 Body{
     background-color: #E0DffD;
     overflow-x: hidden;
+    width: auto;
+
 }
+
 
 .color-roxo{
     background-color: #272747; 
@@ -22,17 +25,9 @@ Body{
 }
 
 
-html {
-  box-sizing: border-box;
-}
-html *,
-html *:before,
-html *:after {
-  box-sizing: inherit;
-  font-family: "Vollkorn", serif;;
-}
+
 .chamativo {
-  color: rgb(248, 113, 113);
+  color: #272747;
   padding: 10px;
   text-align: center;
   font-size: 3em;
@@ -44,19 +39,23 @@ html *:after {
 }
 
 @media (max-width: 576px) {
+  body{
+    width: 100%;
+    overflow-x: hidden;
+  }
   .fundo{
 display: none;
 }
 .fundomobile{
   display: block;
-  width: 100%;
+  width: 120%;
   top: 0;
 }
 .chamativo{
   top: 0;
 }
 .containerHome{
-  margin-top: 45%;
+  margin-top: 30%;
 }
 }
 

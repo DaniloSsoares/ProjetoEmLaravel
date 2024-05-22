@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="/css/Cards.css">
   <link rel="stylesheet" href="/css/Footer.css">
   <link rel="stylesheet" href="/css/Navbar.css">
+  <link rel="stylesheet" href="/css/Galeria.css">
+  <link rel="stylesheet" href="/css/Cards3D.css">
+  <link rel="stylesheet" href="/css/Sobre.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css?family=Mitr|Roboto+Slab|Source+Sans+Pro&display=swap" rel="stylesheet">
   <script src="https://premium-tailwindcomponents.netlify.app/assets/build/js/main.js?id=8c11b7cf78ebea1b5aed"></script>
@@ -30,7 +33,7 @@
               <span class="line line3"></span>
             </div>  
           <div class="logo">
-            <h1>Navbar</h1>
+            <h1></h1>
           </div>
           <div class="menu-items">
             <li><a href="#" id="HomeNa">Home</a></li>
@@ -57,11 +60,12 @@
   <!--       BANNER FILMES ----------------------------------------->
   <main class="h-screen w-screen py-6 flex items-center justify-center flex-wrap mt-20">
 
-
+  
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <div class="Ban">
       <h1 class="chamativo">Principais Filmes</h1>
+      <hr class="star-primary"></hr>
       <div class="containercard">
         @if (count($filmes) > 0)
         @foreach ($filmes as $fil)
@@ -88,7 +92,71 @@
       </div>
 
       <!-- Fim BANNER ------------------------------------------------------------------------------->
+<br><br><br>
+<center>
+    <h1 class="chamativo">Filmes de Animação</h1>
+    <hr class="star-primary"></hr>
 
+    <main class="page-content">
+    <a href="#" alt="Mythrill" >
+  <div class="card2">
+    <div class="wrapper">
+      <img src="/img/Genshin.jpeg" class="cover-image" />
+    </div>
+   
+    <img src="/img/GenshinC.png" class="character" />
+  </div>
+</a>
+
+<a href="#" alt="Mythrill">
+  <div class="card2">
+    <div class="wrapper">
+      <img src="/img/Hunter.jpg" class="cover-image" />
+    </div>
+    <img src="/img/HunterC.png" class="character-Hunter" />
+  </div>
+</a>
+
+<a href="#" alt="Mythrill" >
+  <div class="card2">
+    <div class="wrapper">
+      <img src="/img/Demon.jpg" class="cover-image" />
+    </div>
+    <img src="/img/KimetsuC.png" class="character" />
+  </div>
+</a>
+
+
+</main>
+</center>
+
+<br><br>
+<div class="sobreNos">
+<section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                <h1 class="chamativo">Sobre Nós</h1>
+      <hr class="star-primary"></hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p class='sobre'>
+                        
+                    No universo da programação, onde linhas de código são como pinceladas em um quadro em branco, um grupo de mentes inquietas se reuniu em uma missão singular: criar um portal onde os mundos do cinema se desdobram diante dos olhos ávidos dos espectadores. Unidos pela paixão pela tecnologia e pelo cinema, esses programadores embarcaram em uma jornada de criação que transcendeu os limites do virtual.<br /><br />
+Os desafios eram muitos. Desde a otimização do streaming para garantir uma reprodução fluida, até a implementação de algoritmos de recomendação que entendessem os gostos individuais de cada usuário. Mas esses obstáculos apenas alimentavam a determinação dos programadores, impulsionando-os a superar limites e alcançar novos patamares de excelência.<br /><br />
+Finalmente, após meses de trabalho árduo e dedicação incansável, o site viu a luz do dia. Era mais do que uma simples plataforma de streaming; era um santuário para cinéfilos, um refúgio para os amantes do cinema onde a magia das telonas ganhava vida em pixels e bytes.<br /><br />
+
+Assim, os programadores que criaram esse site para ver filmes não apenas deixaram sua marca no mundo da programação, mas também enriqueceram a vida daqueles que buscam escapar para os reinos da imaginação a cada clique do mouse.                     </p>
+                </div>
+            </div>
+        </div>
+        <br /><br /><br />
+    </section>
+    </div>
+<div class="footer">
+  <center>
       <div class="cardfooter">
         <img src="/img/wallpapersden.com_k-demon-slayer-kimetsu-no-yaiba-poster-2022_4508x4066.jpg" class="cardfooter__image" alt="brown couch" />
         <div class="cardfooter__content">
@@ -97,8 +165,7 @@
               <p class="promo">Prepare-se para uma jornada inesquecível nas telonas com os lançamentos mais aguardados do ano! Com filmes como Oppenheimer, Velozes e Furiosos 10, Jonh Wick e muito mais!</p>
         </div>
       </div>
-
-
+</center>
 
       <footer class="bg-white min-w-full">
         <div class="mx-auto max-w-screen-x3 space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
@@ -184,6 +251,7 @@
               <p class="text-xs text-gray-500">&copy; Ana, Camilly, Carlos, Daniel, Endrigo. Todos os direitos reservados, 2024.</p>
             </div>
       </footer>
+      </div>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
       <script>
