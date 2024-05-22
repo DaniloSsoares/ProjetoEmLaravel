@@ -112,8 +112,8 @@
                 </div>
                 <div class="md:flex items-center mt-12">
                         <div class="w-full flex flex-col">
-                            <label class="font-semibold leading-none">Resumo</label>
-                            <textarea name="resumo" placeholder="Resumo" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200">{{$filmes->resumo}}</textarea>
+                            <label class="font-semibold leading-none">Sinopse</label>
+                            <textarea name="sinopse" placeholder="Sinopse" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200">{{$filmes->sinopse}}</textarea>
                         </div>
                     </div>
                     <br>

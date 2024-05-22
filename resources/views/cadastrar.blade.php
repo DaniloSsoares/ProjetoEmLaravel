@@ -110,9 +110,10 @@
                     </div>
                 </div>
                 <div class="md:flex items-center mt-12">
-                    <div class="w-full md:w-1/2 flex flex-col">
-                        <label class="font-semibold leading-none">Resumo</label>
-                        <textarea type="text" name="resumo" placeholder="Resumo" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"></textarea>
+                        <div class="w-full flex flex-col">
+                            <label class="font-semibold leading-none">Sinopse</label>
+                            <input type="text" name="sinopse" placeholder="Sinopse" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
+                        </div>
                     </div>
                     <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
                         <label class="font-semibold leading-none">Capa</label>
@@ -144,7 +145,7 @@
                     <th scope="col">Gênero</th>
                     <th scope="col">Pontuação</th>
                     <th scope="col">Diretor</th>
-                    <th scope="col">Resumo</th>
+                    <th scope="col">sinopse</th>
                     <th scope="col">Capa</th>
                     <th scope="col">Ações</th>
                 </tr>
@@ -162,7 +163,7 @@
                             <td>{{ $fil->genero }}</td>
                             <td>{{ $fil->pontuacao }}</td>
                             <td>{{ $fil->diretor }}</td>
-                            <td>{{ $fil->resumo }}</td>
+                            <td>{{ $fil->sinopse }}</td>
                             <td>
                                    @if ($fil->capa)
                                        <img src="{{ asset('storage/' . $fil->capa) }}" alt="Capa do filme" style="width: 100px; height: auto;">

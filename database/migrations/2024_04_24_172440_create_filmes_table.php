@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string("genero");
             $table->string("pontuacao");
             $table->string("diretor");
-            $table->string("resumo");
+            $table->string("sinopse");
             $table->string("capa");
             $table->timestamps();
         });

@@ -1,10 +1,14 @@
 .containercard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* Adicionado para centralizar verticalmente */
+  width: 90%;
+  background-color: white;
+  border-radius: 10%;
+  margin: 0 auto; /* Adicionado para centralizar horizontalmente */
+}
+
   
   .card {
     width: 220px;
@@ -35,6 +39,9 @@
     position: relative;
     max-height: 400px;
     overflow: hidden;
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
   }
   @media (min-width: 1024px) {
     .card__thumb {

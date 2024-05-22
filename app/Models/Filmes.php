@@ -17,7 +17,7 @@ class Filmes extends Model
         "genero",
         "pontuacao",
         "diretor",
-        "resumo",
+        "sinopse",
         "capa"
         ];
 

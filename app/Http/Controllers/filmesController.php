@@ -27,7 +27,7 @@ class filmesController extends Controller
             $filme->genero = $req->genero;
             $filme->pontuacao = $req->pontuacao;
             $filme->diretor = $req->diretor;
-            $filme->resumo= $req->resumo;
+            $filme->sinopse= $req->sinopse;
             $filme->capa= $req->capa;
 
           //hasFile está sendo usado para verificar se uma qrquivo com nome capa do form foi enviado na requisição
@@ -57,7 +57,7 @@ class filmesController extends Controller
                      "genero" => $req->genero,
                      "pontuacao" => $req->pontuacao,
                      "diretor" => $req->diretor,
-                     "resumo"=> $req->resumo,
+                     "sinopse"=> $req->sinopse,
                      "capa"=> $filme->capa
              ]); 
         
