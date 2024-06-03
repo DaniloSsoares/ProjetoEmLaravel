@@ -17,28 +17,34 @@ class filmesController extends Controller
     }
     
     
-        public function adicionar(Request $req){
-            $filme = new Filmes;
-            $filme->titulo = $req->titulo;
-            $filme->subtitulo = $req->subtitulo;
-            $filme->anolanc = $req-> anolanc;
-            $filme->duracao = $req->duracao;
-            $filme->classi = $req->classi;
-            $filme->genero = $req->genero;
-            $filme->pontuacao = $req->pontuacao;
-            $filme->diretor = $req->diretor;
-            $filme->sinopse= $req->sinopse;
-            $filme->capa= $req->capa;
+        public function adicionar(Request $req){       
+     try{
+       // dd($req->all());
+        
+        $filme = new Filmes;
+        $filme->titulo = $req->titulo;
+        $filme->subtitulo = $req->subtitulo;
+        $filme->anolanc = $req->anolanc;
+        $filme->duracao = $req->duracao;
+        $filme->classi = $req->classi;
+        $filme->genero = $req->genero;
+        $filme->pontuacao = $req->pontuacao;
+        $filme->diretor = $req->diretor;
+        $filme->sinopse = $req->sinopse;
 
-          //hasFile está sendo usado para verificar se uma qrquivo com nome capa do form foi enviado na requisição
-           if ($req->hasFile('capa') && $req->file('capa')->isValid()) {
-            //a proxima linha armazena o arquivo enviado para o arquivo capas
-            $filme->capa = $req->capa->store('capas', 'public');
-           }
-            $filme->save();
-            return redirect()->back();
+        
+        if ($req->hasFile('capa') && $req->file('capa')->isValid()) {
+            
+            $filme->capa = $req->file('capa')->store('capas', 'public');
         }
-    
+        $filme->save();
+        return redirect()->back()->with('success', 'Filme adicionado com sucesso!');
+    } catch (\Exception $e) {
+        
+        return redirect()->back()->withErrors(['error' => 'Ocorreu um erro ao adicionar o filme: ' . $e->getMessage()]);
+    }
+}
+        
         public function editar(Request $req){
             $filme = Filmes::find($req->id);
             return view('editar')->with("filmes", $filme);

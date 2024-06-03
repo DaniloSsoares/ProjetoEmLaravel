@@ -44,7 +44,7 @@
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <div class="hidden md:block">
+                        <div class="md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                             <a href="#" id="HomeNa" class="text-violet-100  hover:text-rose-500 rounded-md px-3 py-2 text-lg  font-medium">Home</a>

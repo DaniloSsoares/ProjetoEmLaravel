@@ -44,7 +44,7 @@
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <div class="hidden md:block">
+                        <div class="md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                             <a href="#" id="HomeNa" class="text-violet-100  hover:text-rose-500 rounded-md px-3 py-2 text-lg  font-medium">Home</a>
@@ -74,7 +74,7 @@
                         <label class="font-semibold leading-none">Título</label>
                         <input type="text" name="titulo" placeholder="Título" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
                     </div>
-                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
+                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 ">
                         <label class="font-semibold leading-none">Subtitulo</label>
                         <input type="text" name="subtitulo" placeholder="subtitulo" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
                     </div>
@@ -82,11 +82,11 @@
                 <div class="md:flex items-center mt-12">
                     <div class="w-full md:w-1/2 flex flex-col">
                         <label class="font-semibold leading-none">Lançamento</label>
-                        <input type="text" name="anolanc" placeholder="Ex: 2024" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
+                        <input type="date" name="anolanc" placeholder="Ex: 2024/05/10" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
                     </div>
-                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
+                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 ">
                         <label class="font-semibold leading-none">Duração</label>
-                        <input type="text" name="duracao" placeholder="Ex: 1h 1m" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
+                        <input type="time" name="duracao" placeholder="Ex: 2:10" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
                     </div>
                 </div>
                 <div class="md:flex items-center mt-12">
@@ -94,7 +94,7 @@
                         <label class="font-semibold leading-none">Classificação</label>
                         <input type="text" name="classi" placeholder="Ex: A10" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
                     </div>
-                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
+                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0">
                         <label class="font-semibold leading-none">Gênero cinematográfico</label>
                         <input type="text" name="genero" placeholder="ficção" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
                     </div>
@@ -102,9 +102,9 @@
                 <div class="md:flex items-center mt-12">
                     <div class="w-full md:w-1/2 flex flex-col">
                         <label class="font-semibold leading-none">Pontuação</label>
-                        <input type="text" name="pontuacao" placeholder="Ex: 4,2" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
+                        <input type="number" name="pontuacao" placeholder="Ex: 4,2" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
                     </div>
-                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
+                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 ">
                         <label class="font-semibold leading-none">Diretor</label>
                         <input type="text" name="diretor" placeholder="Nome do Diretor" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
                     </div>

@@ -17,14 +17,14 @@ return new class extends Migration
             $table->id();
             $table->string("titulo");
             $table->string("subtitulo");
-            $table->string("anolanc");
-            $table->string("duracao");
+            $table->date("anolanc");
+            $table->time("duracao");
             $table->string("classi");
             $table->string("genero");
             $table->string("pontuacao");
             $table->string("diretor");
-            $table->string("sinopse");
-            $table->string("capa");
+            $table->TEXT("sinopse");
+            $table->TEXT("capa");
             $table->timestamps();
         });
     }

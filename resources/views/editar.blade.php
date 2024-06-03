@@ -121,7 +121,7 @@
                         <div class="w-full flex flex-col">
                             <label class="font-semibold leading-none">Capa Atual</label>
                           @if($filmes->capa)
-                           <img src="{{asset('storage/' . $filmes->capa)}}" alt="capa anterior">
+                           <img src="{{asset('storage/' . $filmes->capa)}}" alt="capa anterior " class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200 size-3/5">
                            @endif
                     </div>
                     <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0">

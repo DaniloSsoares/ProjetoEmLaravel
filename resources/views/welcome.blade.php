@@ -79,7 +79,7 @@
               <h2 class="card__title"> {{ $fil->titulo }}<br></h2>
               <br>
               <p class="card__snippet">{{ $fil->sinopse }}</p>
-              <a href="#" id="ListarNa" class="card__button">Leia Mais</a>
+              <a href="/listar" class="card__button">Leia Mais</a>
             </figcaption>
           </figure>
         </div>
@@ -257,11 +257,7 @@ Assim, os programadores que criaram esse site para ver filmes não apenas deixar
       <script>
         ['Cadastrar', 'CadastrarNa'].forEach(id => document.getElementById(id)?.addEventListener('click', () => window.location.href = '/cadastrar'));
 
-        ['Atualizar', 'AtualizarNa'].forEach(id => document.getElementById(id)?.addEventListener('click', () => window.location.href = '/atualizar'));
-
         ['Editar', 'EditarNa'].forEach(id => document.getElementById(id)?.addEventListener('click', () => window.location.href = '/editar'));
-
-        ['Deletar', 'DeletarNa'].forEach(id => document.getElementById(id)?.addEventListener('click', () => window.location.href = '/deletar'));
 
         ['Listar', 'ListarNa'].forEach(id => document.getElementById(id)?.addEventListener('click', () => window.location.href = '/listar'));
       </script>
