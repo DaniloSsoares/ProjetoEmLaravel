@@ -52,7 +52,7 @@ class filmesController extends Controller
             return view('editar')->with("filmes", $filme);
         }
     
-        public function atualizar(Request $req){
+        public function atualizar(adicionarRequest $req){
             $filme = Filmes::find($req->id);
             if ($req->hasFile('capa') && $req->file('capa')->isValid()) {
                 $filme->capa = $req->capa->store('capas', 'public');}

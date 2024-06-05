@@ -63,15 +63,7 @@
         <a class="text-gray-200 underline" href="https://tailwindcomponents.com/component/responsive-contact-form-2-light-mode">Component details</a>
     </div>-->
 
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+   
 
     <div class="w-full">
     <div class="bg-gradient-to-b from-blue-800 to-blue-600 h-96"></div>
@@ -141,6 +133,15 @@
         </div>
     </div>
 </div>
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 <div class="container mt-5">
     <div class="table-responsive">
