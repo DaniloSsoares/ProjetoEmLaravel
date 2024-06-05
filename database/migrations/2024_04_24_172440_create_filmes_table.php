@@ -21,7 +21,7 @@ return new class extends Migration
             $table->time("duracao");
             $table->string("classi");
             $table->string("genero");
-            $table->string("pontuacao");
+            $table->float("pontuacao");
             $table->string("diretor");
             $table->TEXT("sinopse");
             $table->TEXT("capa");

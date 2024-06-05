@@ -62,6 +62,17 @@
    <!-- <div class="fixed bottom-0 left-0 right-0 z-40 px-4 py-3 text-center text-white bg-gray-800">
         <a class="text-gray-200 underline" href="https://tailwindcomponents.com/component/responsive-contact-form-2-light-mode">Component details</a>
     </div>-->
+
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
     <div class="w-full">
     <div class="bg-gradient-to-b from-blue-800 to-blue-600 h-96"></div>
     <div class="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12">
@@ -86,7 +97,7 @@
                     </div>
                     <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 ">
                         <label class="font-semibold leading-none">Duração</label>
-                        <input type="time" name="duracao" placeholder="Ex: 2:10" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
+                        <input type="text" name="duracao" placeholder="Ex: 2:10" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
                     </div>
                 </div>
                 <div class="md:flex items-center mt-12">
@@ -102,7 +113,7 @@
                 <div class="md:flex items-center mt-12">
                     <div class="w-full md:w-1/2 flex flex-col">
                         <label class="font-semibold leading-none">Pontuação</label>
-                        <input type="number" name="pontuacao" placeholder="Ex: 4,2" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
+                        <input type="text" name="pontuacao" placeholder="Ex: 4,2" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
                     </div>
                     <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 ">
                         <label class="font-semibold leading-none">Diretor</label>

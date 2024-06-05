@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Http\Requests\adicionarRequest;
 use App\Models\Filmes;
 use Illuminate\Http\Request;
 
@@ -17,7 +19,7 @@ class filmesController extends Controller
     }
     
     
-        public function adicionar(Request $req){       
+        public function adicionar(adicionarRequest $req){       
      try{
        // dd($req->all());
         
@@ -28,7 +30,7 @@ class filmesController extends Controller
         $filme->duracao = $req->duracao;
         $filme->classi = $req->classi;
         $filme->genero = $req->genero;
-        $filme->pontuacao = $req->pontuacao;
+        $filme->pontuacao = floatval($req->pontuacao);
         $filme->diretor = $req->diretor;
         $filme->sinopse = $req->sinopse;
 
