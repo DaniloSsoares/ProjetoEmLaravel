@@ -71,67 +71,66 @@
             <form method="POST" action="/atualizar/{{$filmes->id}}" enctype="multipart/form-data">
                 @csrf
                 <div class="md:flex items-center mt-12">
-                    <div class="w-full md:w-1/2 flex flex-col">
+                    <div class="w-full md:w-1/3 flex flex-col md:ml-6 md:mt-0 mt-4">
                         <label class="font-semibold leading-none">Título</label>
-                        <input type="text" name="titulo" value="{{$filmes->titulo}}" placeholder="Título" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
+                        <input type="text" name="titulo" value="{{$filmes->titulo}}" placeholder="Título" class="leading-none text-gray-900 p-2 focus:outline-none focus:border-blue-700 mt-2 bg-gray-200 border rounded border-gray-200" />
                     </div>
-                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0">
+                    <div class="w-full md:w-1/3 flex flex-col md:ml-6 md:mt-0 mt-4">
                         <label class="font-semibold leading-none">Subtitulo</label>
-                        <input type="text" name="subtitulo" value="{{$filmes->subtitulo}}"  placeholder="subtitulo" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
+                        <input type="text" name="subtitulo" value="{{$filmes->subtitulo}}"  placeholder="subtitulo" class="leading-none text-gray-900 p-2 focus:outline-none focus:border-blue-700 mt-2 bg-gray-200 border rounded border-gray-200"/>
                     </div>
-                </div>
-                <div class="md:flex items-center mt-12">
-                    <div class="w-full md:w-1/2 flex flex-col">
+                    <div class="w-full md:w-1/3 flex flex-col md:ml-6 md:mt-0 mt-4">
                         <label class="font-semibold leading-none">Lançamento</label>
-                        <input type="text" name="anolanc" value="{{$filmes->anolanc}}" placeholder="Ex: 2024" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
+                        <input type="text" name="anolanc" value="{{$filmes->anolanc}}" placeholder="Ex: 2024" class="leading-none text-gray-900 p-2 focus:outline-none focus:border-blue-700 mt-2 bg-gray-200 border rounded border-gray-200" />
                     </div>
-                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0">
+                </div>
+                <div class="md:flex items-center mt-12">
+                    <div class="w-full md:w-1/3 flex flex-col md:ml-6 md:mt-0 mt-4">
                         <label class="font-semibold leading-none">Duração</label>
-                        <input type="text" name="duracao" value="{{$filmes->duracao}}" placeholder="Ex: 1h 1m" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
+                        <input type="text" name="duracao" value="{{$filmes->duracao}}" placeholder="Ex: 1h 1m" class="leading-none text-gray-900 p-2 focus:outline-none focus:border-blue-700 mt-2 bg-gray-200 border rounded border-gray-200"/>
                     </div>
-                </div>
-                <div class="md:flex items-center mt-12">
-                    <div class="w-full md:w-1/2 flex flex-col">
+                    <div class="w-full md:w-1/3 flex flex-col md:ml-6 md:mt-0 mt-4">
                         <label class="font-semibold leading-none">Classificação</label>
-                        <input type="text" name="classi" value="{{$filmes->classi}}" placeholder="Ex: A10" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
+                        <input type="text" name="classi" value="{{$filmes->classi}}" placeholder="Ex: A10" class="leading-none text-gray-900 p-2 focus:outline-none focus:border-blue-700 mt-2 bg-gray-200 border rounded border-gray-200" />
                     </div>
-                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0">
+                    <div class="w-full md:w-1/3 flex flex-col md:ml-6 md:mt-0 mt-4">
                         <label class="font-semibold leading-none">Gênero cinematográfico</label>
-                        <input type="text" name="genero" value="{{$filmes->genero}}" placeholder="ficção" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
+                        <input type="text" name="genero" value="{{$filmes->genero}}" placeholder="ficção" class="leading-none text-gray-900 p-2 focus:outline-none focus:border-blue-700 mt-2 bg-gray-200 border rounded border-gray-200"/>
                     </div>
                 </div>
                 <div class="md:flex items-center mt-12">
-                    <div class="w-full md:w-1/2 flex flex-col">
+                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
                         <label class="font-semibold leading-none">Pontuação</label>
-                        <input type="text" name="pontuacao" value="{{$filmes->pontuacao}}" placeholder="Ex: 4,2" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
+                        <input type="text" name="pontuacao" value="{{$filmes->pontuacao}}" placeholder="Ex: 4,2" class="leading-none text-gray-900 p-2 focus:outline-none focus:border-blue-700 mt-2 bg-gray-200 border rounded border-gray-200" />
                     </div>
-                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0">
+                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
                         <label class="font-semibold leading-none">Diretor</label>
-                        <input type="text" name="diretor" value="{{$filmes->diretor}}" placeholder="Nome do Diretor" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
+                        <input type="text" name="diretor" value="{{$filmes->diretor}}" placeholder="Nome do Diretor" class="leading-none text-gray-900 p-2 focus:outline-none focus:border-blue-700 mt-2 bg-gray-200 border rounded border-gray-200"/>
                     </div>
+                    
                 </div>
                 <div class="md:flex items-center mt-12">
-                        <div class="w-full flex flex-col">
+                <div class="w-full flex flex-col md:ml-6 md:mt-0 mt-4">
                             <label class="font-semibold leading-none">Sinopse</label>
-                            <textarea name="sinopse" placeholder="Sinopse" class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200">{{$filmes->sinopse}}</textarea>
-                        </div>
+                            <textarea name="sinopse" placeholder="Sinopse" class="leading-none text-gray-900 p-2 focus:outline-none focus:border-blue-700 mt-2 bg-gray-200 border rounded border-gray-200">{{$filmes->sinopse}}</textarea>
+                    </div>
                     </div>
                     <br>
                     <div class="md:flex items-center mt-12">
-                        <div class="w-full flex flex-col">
+                        <div class="w-full flex md:w-1/2 flex-col md:ml-6 md:mt-0 mt-4">
                             <label class="font-semibold leading-none">Capa Atual</label>
                           @if($filmes->capa)
-                           <img src="{{asset('storage/' . $filmes->capa)}}" alt="capa anterior " class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200 size-3/5">
+                           <img src="{{asset('storage/' . $filmes->capa)}}" alt="capa anterior " class="leading-none text-gray-900 p-2 focus:outline-none focus:border-blue-700 mt-2 bg-gray-200 border rounded border-gray-200 size-3/5">
                            @endif
                     </div>
-                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0">
+                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
                         <label class="font-semibold leading-none">Capa</label>
-                        <input type="file" name="capa" value="{{$filmes->capa}}"  class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"/>
+                        <input type="file" name="capa" value="{{$filmes->capa}}"  class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-2 bg-gray-200 border rounded border-gray-200"/>
                     </div>
                 </div>
                 
                 <div class="flex items-center justify-center w-full">
-                <button type="submit" class="mt-9 font-semibold leading-none text-white py-4 px-10 bg-blue-700 rounded hover:bg-blue-600 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:outline-none">
+                <button type="submit" class="mt-9 font-semibold leading-none text-white py-3 px-10 bg-blue-700 rounded hover:bg-blue-600 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:outline-none">
                         Atualizar
                 </button>
             </form>

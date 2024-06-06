@@ -27,7 +27,7 @@ class adicionarRequest extends FormRequest
             'titulo' => 'required|string|max:255|',
             'subtitulo' => 'required|string|max:255',
             'anolanc' => 'required|String|max:' . date('Y'),
-            'duracao' => 'required|string|max:300', // Duração em minutos
+            'duracao' => 'required|string|max:300',
             'classi' => 'required|string|max:255',
             'genero' => 'required|string|max:255',
             'pontuacao' => 'required|numeric|min:1|max:10',
