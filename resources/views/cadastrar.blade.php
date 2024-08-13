@@ -120,8 +120,13 @@
                         <label class="font-semibold leading-none">Capa</label>
                         <input type="file" name="capa"  class="leading-none text-gray-900 p-2 focus:outline-none  focus:border-blue-700 mt-2 bg-gray-200 border rounded border-gray-200" onchange="loadFile(event)"/>
                     </div>
+                    <!-- O atributo `onchange="loadFile(event)"` chama a função JavaScript `loadFile` 
+                        sempre que o usuário seleciona um arquivo, permitindo a visualização da imagem selecionada -->
                     <div class="w-full md:w-1/3 flex flex-col md:ml-6 mt-4 focus:border-blue-700 mt-2 bg-gray-200 border rounded border-gray-200">
                         <img  id="output">
+                         <!-- Elemento <img> onde a imagem selecionada será exibida -->
+                            <!-- A função `loadFile` definida anteriormente definirá o atributo `src` deste <img>,
+                             permitindo que a imagem selecionada pelo usuário seja exibida aqui -->
                     </div>
                 </div>
                 
@@ -147,6 +152,7 @@
     <div class="table-responsive">
         <table class="table table-bordered border-primary">
             <thead class="bg-primary text-white">
+                 <!-- Define as colunas da tabela -->
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Título</th>
@@ -163,7 +169,9 @@
                 </tr>
             </thead>
             <tbody>
+                  <!-- Verifica se há filmes disponíveis para exibição -->
                 @if (count($filmes) > 0)
+                <!-- Itera sobre cada filme e exibe suas informações em uma linha da tabela -->
                     @foreach ($filmes as $fil)
                         <tr>
                             <td>{{ $fil->id }}</td>
@@ -177,13 +185,16 @@
                             <td>{{ $fil->diretor }}</td>
                             <td>{{ $fil->sinopse }}</td>
                             <td>
+                                <!-- Verifica se o filme tem uma capa associada -->
                                    @if ($fil->capa)
+                                   <!-- Exibe a imagem da capa do filme -->
                                        <img src="{{ asset('storage/' . $fil->capa) }}" alt="Capa do filme" style="width: 100px; height: auto;">
                                    @else
                                        <p>Sem capa</p>
                                    @endif
                             </td>
                             <td>
+                                <!-- Botões para editar ou excluir o filme -->
                                 <a href="/editar/{{ $fil->id }}" class="btn btn-primary">Editar</a>
                                 <a href="/excluir/{{ $fil->id }}" class="btn btn-danger">Excluir</a>
                             </td>
@@ -201,9 +212,16 @@
 
 
     <script>
+         // Função JavaScript para carregar a imagem selecionada e exibir no elemento <img> com id 'output'
     const loadFile = function(event){
+         // Obtém o elemento <img> onde a imagem será exibida
         const output =document.getElementById('output');
+         // Cria uma URL temporária para o arquivo de imagem selecionado pelo usuário
+            // event.target.files[0] acessa o primeiro arquivo selecionado
+            // URL.createObjectURL() gera uma URL temporária para esse arquivo
         output.src = URL.createObjectURL(event.target.files[0]);
+           // A propriedade src do elemento <img> é definida como a URL temporária criada,
+            // fazendo com que a imagem seja exibida imediatamente na página
     }
         
     </script>
